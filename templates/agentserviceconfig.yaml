@@ -1,0 +1,37 @@
+apiVersion: agent-install.openshift.io/v1beta1
+kind: AgentServiceConfig
+metadata:
+  name: agent
+spec:
+  databaseStorage:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: {{ .Values.agentServiceConfig.dbVolumeSize }}
+  filesystemStorage:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: {{ .Values.agentServiceConfig.fsVolumeSize }}
+  mirrorRegistryRef:
+    name: {{ .Values.configMap.name }}
+  unauthenticatedRegistries:
+{{- range .Values.agentServiceConfig.unauthenticatedRegistries }}
+    - {{ . }}
+{{- end }}
+  imageStorage:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: {{ .Values.agentServiceConfig.imageVolumeSize }}
+  osImages:
+{{- range .Values.agentServiceConfig.osImages }}
+    - openshiftVersion: "{{ .openshiftVersion }}"
+      version: "{{ .version }}"
+      url: "{{ .url }}"
+      cpuArchitecture: "{{ .cpuArchitecture }}"
+{{- end }}
+

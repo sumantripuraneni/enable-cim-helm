@@ -1,0 +1,31 @@
+watchAllNamespaces: true
+
+configMap:
+  name: mirror-config
+  namespace: multicluster-engine
+  caBundle: |
+    -----BEGIN CERTIFICATE-----
+    MIID...your-cert-contents...
+    -----END CERTIFICATE-----
+  registryMirrors:
+    - source: "registry.redhat.io/multicluster-engine"
+      mirror: "example.com/multicluster-engine"
+    - source: "quay.io/openshift-release-dev/ocp-release"
+      mirror: "example.com/ocp-release"
+    - source: "quay.io/openshift-release-dev/ocp-release/ocp-v4.0-art-dev"
+      mirror: "example.com/nautilus/opeshift4/release"
+    - source: "registry.redhat.io/redhat/openshift4"
+      mirror: "example.com/nautilus/opeshift4"
+
+
+agentServiceConfig:
+  dbVolumeSize: 10Gi
+  fsVolumeSize: 15Gi
+  imageVolumeSize: 20Gi
+  unauthenticatedRegistries:
+    - "untrusted.registry.com"
+  osImages:
+    - openshiftVersion: "4.18"
+      version: "418.04.202501221327-0"
+      url: "https://example.com/path/to/rhcos-4.18.1-x86_64-live.x86_64.iso"
+      cpuArchitecture: "x86_64"

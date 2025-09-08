@@ -1,0 +1,6 @@
+apiVersion: metal3.io/v1
+kind: Provisioning
+metadata:
+  name: provisioning-configuration
+spec:
+  watchAllNamespaces: {{ .Values.watchAllNamespaces }}
