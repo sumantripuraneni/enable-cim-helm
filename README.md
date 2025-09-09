@@ -2,7 +2,6 @@
 
 ---
 
-```markdown
 # enable-cim-helm
 
 A Helm chart to configure the **Multi‑Cluster‑Engine (MCE)** and enable **Central Infrastructure Management (CIM)**.
