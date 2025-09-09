@@ -7,7 +7,7 @@ A Helm chart to configure the **Multi‑Cluster‑Engine (MCE)** and enable **Ce
 
 ## Overview
 
-This Helm chart helps streamline and automate enabling CIM capabilities via MCE in your Kubernetes or OpenShift clusters. It encapsulates the necessary `ConfigMap`, values, and template logic to simplify deployment, especially in multi-cluster management scenarios.
+This Helm chart helps streamline and automate enabling CIM capabilities via MCE in OpenShift clusters. It encapsulates the necessary `ConfigMap`, values, and template logic to simplify deployment, especially in multi-cluster management scenarios.
 
 ---
 
