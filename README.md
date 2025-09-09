@@ -17,17 +17,6 @@ This Helm chart helps streamline and automate enabling CIM capabilities via MCE 
 
 ## Contents
 
-```
-
-enable-cim-helm/
-├── Chart.yaml
-├── values.yaml
-├── configmap.yaml
-└── templates/
-└── ...        # Kubernetes manifests and template files
-
-````
-
 - **Chart.yaml** – Metadata for the Helm chart (name, version, etc.).
 - **values.yaml** – Default configuration values; override as needed.
 - **configmap.yaml** – Defines the core config used by MCE to enable CIM.
