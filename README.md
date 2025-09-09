@@ -31,18 +31,19 @@ This Helm chart helps streamline and automate enabling CIM capabilities via MCE 
 ## Installation
 
 1. Add your chart repository or use a local path:
+   
    ```bash
    helm repo add my‑repo <your-chart-repo-url>
    helm repo update
-````
+   ````
 
-2. Install with default settings:
+3. Install with default settings:
 
    ```bash
    helm install enable-cim my‑repo/enable-cim-helm
    ```
 
-3. To customize settings:
+4. To customize settings:
 
    ```bash
    helm install enable‑cim my‑repo/enable‑cim‑helm \
