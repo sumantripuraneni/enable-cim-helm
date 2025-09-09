@@ -59,20 +59,6 @@ To clean up the deployed resources:
 helm uninstall enable-cim
 ```
 
-This removes the ConfigMap and any related resources created by the chart.
-
-```
-
----
-
-## Contributing
-
-Contributions are welcome! To help improve the chart:
-
-* Open issues to report bugs or request enhancements.
-* Submit pull requests for fixes or new features.
-
----
 
 ## License
 
